@@ -1,218 +1,106 @@
-import {Component} from 'react'
+import { Component } from "react";
 import {
-    Stack,
-    Button,
-    Card,
-    CardBody,
-    CardFooter,
-    Heading,
-    Text,
-    Image,
-    Divider,
-    ButtonGroup,
-    Grid,
-  } from "@chakra-ui/react";
+  Stack,
+  Card,
+  CardBody,
+  Heading,
+  Text,
+  Image,
+  Grid,
+  Divider
+} from "@chakra-ui/react";
+import axios from "axios";
 
-class CardMenu extends Component {
-    render() {
-        return (
-            <>
-            <Grid templateColumns="repeat(3, 1fr)" gap={6}>
-              <Card maxW="sm">
-                <CardBody>
-                  <Image
-                    src="food 1.jpg"
-                    alt="Green double couch with wooden legs"
-                    borderRadius="lg"
-                  />
-                  <Stack mt="6" spacing="3">
-                    <Heading size="md">Living room Sofa</Heading>
-                    <Text>
-                      This sofa is perfect for modern tropical spaces, baroque
-                      inspired spaces, earthy toned spaces and for people who
-                      love a chic design with a sprinkle of vintage design.
-                    </Text>
-                    <Text color="blue.600" fontSize="2xl">
-                      $450
-                    </Text>
-                  </Stack>
-                </CardBody>
-                <Divider />
-                <CardFooter>
-                  <ButtonGroup spacing="2">
-                    <Button variant="solid" colorScheme="blue">
-                      Buy now
-                    </Button>
-                    <Button variant="ghost" colorScheme="blue">
-                      Add to cart
-                    </Button>
-                  </ButtonGroup>
-                </CardFooter>
-              </Card>
-
-              <Card maxW="sm">
-                <CardBody>
-                  <Image
-                    src="food 2.jpg"
-                    alt="Green double couch with wooden legs"
-                    borderRadius="lg"
-                  />
-                  <Stack mt="6" spacing="3">
-                    <Heading size="md">Living room Sofa</Heading>
-                    <Text>
-                      This sofa is perfect for modern tropical spaces, baroque
-                      inspired spaces, earthy toned spaces and for people who
-                      love a chic design with a sprinkle of vintage design.
-                    </Text>
-                    <Text color="blue.600" fontSize="2xl">
-                      $450
-                    </Text>
-                  </Stack>
-                </CardBody>
-                <Divider />
-                <CardFooter>
-                  <ButtonGroup spacing="2">
-                    <Button variant="solid" colorScheme="blue">
-                      Buy now
-                    </Button>
-                    <Button variant="ghost" colorScheme="blue">
-                      Add to cart
-                    </Button>
-                  </ButtonGroup>
-                </CardFooter>
-              </Card>
-
-              <Card maxW="sm">
-                <CardBody>
-                  <Image
-                    src="food 3.jpg"
-                    alt="Green double couch with wooden legs"
-                    borderRadius="lg"
-                  />
-                  <Stack mt="6" spacing="3">
-                    <Heading size="md">Living room Sofa</Heading>
-                    <Text>
-                      This sofa is perfect for modern tropical spaces, baroque
-                      inspired spaces, earthy toned spaces and for people who
-                      love a chic design with a sprinkle of vintage design.
-                    </Text>
-                    <Text color="blue.600" fontSize="2xl">
-                      $450
-                    </Text>
-                  </Stack>
-                </CardBody>
-                <Divider />
-                <CardFooter>
-                  <ButtonGroup spacing="2">
-                    <Button variant="solid" colorScheme="blue">
-                      Buy now
-                    </Button>
-                    <Button variant="ghost" colorScheme="blue">
-                      Add to cart
-                    </Button>
-                  </ButtonGroup>
-                </CardFooter>
-              </Card>
-            </Grid>
-            <Grid templateColumns="repeat(3, 1fr)" gap={6} mt="50px">
-              <Card maxW="sm">
-                <CardBody>
-                  <Image
-                    src="food 1.jpg"
-                    alt="Green double couch with wooden legs"
-                    borderRadius="lg"
-                  />
-                  <Stack mt="6" spacing="3">
-                    <Heading size="md">Living room Sofa</Heading>
-                    <Text>
-                      This sofa is perfect for modern tropical spaces, baroque
-                      inspired spaces, earthy toned spaces and for people who
-                      love a chic design with a sprinkle of vintage design.
-                    </Text>
-                    <Text color="blue.600" fontSize="2xl">
-                      $450
-                    </Text>
-                  </Stack>
-                </CardBody>
-                <Divider />
-                <CardFooter>
-                  <ButtonGroup spacing="2">
-                    <Button variant="solid" colorScheme="blue">
-                      Buy now
-                    </Button>
-                    <Button variant="ghost" colorScheme="blue">
-                      Add to cart
-                    </Button>
-                  </ButtonGroup>
-                </CardFooter>
-              </Card>
-
-              <Card maxW="sm">
-                <CardBody>
-                  <Image
-                    src="food 2.jpg"
-                    alt="Green double couch with wooden legs"
-                    borderRadius="lg"
-                  />
-                  <Stack mt="6" spacing="3">
-                    <Heading size="md">Living room Sofa</Heading>
-                    <Text>
-                      This sofa is perfect for modern tropical spaces, baroque
-                      inspired spaces, earthy toned spaces and for people who
-                      love a chic design with a sprinkle of vintage design.
-                    </Text>
-                    <Text color="blue.600" fontSize="2xl">
-                      $450
-                    </Text>
-                  </Stack>
-                </CardBody>
-                <Divider />
-                <CardFooter>
-                  <ButtonGroup spacing="2">
-                    <Button variant="solid" colorScheme="blue">
-                      Buy now
-                    </Button>
-                    <Button variant="ghost" colorScheme="blue">
-                      Add to cart
-                    </Button>
-                  </ButtonGroup>
-                </CardFooter>
-              </Card>
-
-              <Card maxW="sm">
-                <CardBody>
-                  <Image
-                    src="food 3.jpg"
-                    alt="Green double couch with wooden legs"
-                    borderRadius="lg"
-                  />
-                  <Stack mt="6" spacing="3">
-                    <Heading size="md">Living room Sofa</Heading>
-                    <Text>
-                      This sofa is perfect for modern tropical spaces, baroque
-                      inspired spaces, earthy toned spaces and for people who
-                      love a chic design with a sprinkle of vintage design.
-                    </Text>
-                    <Text color="blue.600" fontSize="2xl">
-                      $450
-                    </Text>
-                  </Stack>
-                </CardBody>
-                <Divider />
-                <CardFooter>
-                  <ButtonGroup spacing="2">
-                    <Button variant="solid" colorScheme="blue">
-                      Buy now
-                    </Button>
-                    <Button variant="ghost" colorScheme="blue">
-                      Add to cart
-                    </Button>
-                  </ButtonGroup>
-                </CardFooter>
-              </Card>
-            </Grid>
-            </>
-        )
-    }
+interface Data {
+  data: {
+    name: string;
+    imageUrl: string;
+    categories: string;
+    description: string;
+    badge: string;
+  }[];
 }
-export default CardMenu
+
+class CardMenu extends Component<{ value?: null | undefined }, Data> {
+  constructor(props: { value?: null | undefined }) {
+    super(props);
+    this.state = {
+      data: [],
+    };
+  }
+
+  componentDidMount() {
+    axios
+      .get("https://api.npoint.io/624c99ed50dcd45fb160")
+      .then((response) => {
+        this.setState({ data: response.data });
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }
+
+  render() {
+    return (
+      <>
+      <Divider w={{ base: '100%', md: 'none' }}
+      mb={{ base: '20px', md: 'none' }}/>
+        <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={6}>
+          {this.state.data.map((item, index) => (
+            <Card key={index} maxW="sm">
+              <CardBody>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <div
+                    style={{
+                      padding: "0px 10px",
+                      marginTop: "-10px",
+                      position: "absolute",
+                      backgroundColor: "#186F65",
+                      borderRadius: "5px",
+                      color:"white",
+                      fontWeight: "bold"
+                    }}
+                  >
+                    {item.badge}
+                  </div>
+                </div>
+                <div
+                  style={{
+                    width: "100%",
+                    height: "120px",
+                  }}
+                >
+                  <Image
+                    src={item.imageUrl}
+                    alt="Green double couch with wooden legs"
+                    borderRadius="lg"
+                    w="100%"
+                    h="100%"
+                    style={{
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+                <Stack mt="6" spacing="3">
+                  <Heading size="md">{item.name}</Heading>
+                  <Text color="blue.600" fontSize="sm">
+                    {item.categories}
+                  </Text>
+                  <div>
+                    <Text fontSize="sm">{item.description}</Text>
+                  </div>
+                </Stack>
+              </CardBody>
+            </Card>
+          ))}
+        </Grid>
+      </>
+    );
+  }
+}
+export default CardMenu;
